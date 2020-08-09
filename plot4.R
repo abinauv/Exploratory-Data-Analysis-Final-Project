@@ -13,8 +13,8 @@ emissions.coal.related <- summarise(group_by(emissions.coal.combustion, year), E
 png("plot4.png", width=480, height=480)
 g <- (ggplot(emissions.coal.related, aes(x=factor(year), y=Emissions/1000,fill=year, label = round(Emissions/1000,2))) +
   geom_bar(stat="identity") +
-  xlab("year") +
-  ylab(expression("total PM"[2.5]*" emissions in kilotons")) +
+  xlab("Year") +
+  ylab(expression("Total PM"[2.5]*" emissions in kilotons")) +
   ggtitle("Emissions from coal combustion-related sources in kilotons")+
   geom_label(aes(fill = year),colour = "white", fontface = "bold"))
 print(g)

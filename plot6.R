@@ -14,8 +14,8 @@ png("plot6.png", width=480, height=480)
 g <- (ggplot(both.emissions, aes(x=factor(year), y=Emissions, fill=County,label = round(Emissions,2))) +
   geom_bar(stat="identity") + 
   facet_grid(County~., scales="free") +
-  ylab(expression("total PM"[2.5]*" emissions in tons")) + 
-  xlab("year") +
+  ylab(expression("Total PM"[2.5]*" emissions in tons")) + 
+  xlab("Year") +
   ggtitle(expression("Motor vehicle emission variation in Baltimore and Los Angeles in tons"))+
   geom_label(aes(fill = County),colour = "white", fontface = "bold"))
 print(g)
